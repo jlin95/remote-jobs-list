@@ -1,4 +1,12 @@
-# vue-prototype
+# Remote Jobs Feed
+
+### Description
+Built using Vue CLI. Data retrieved from [Remote OK API](https://remoteok.io/api).
+
+### Dev Tasks to Complete
+- Linting
+- Testing 
+- Deployment
 
 ## Project setup
 ```
@@ -15,10 +23,4 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
