@@ -1,28 +1,37 @@
+  
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Remote OK Jobs Board</h1>
+    <div
+      v-for="job in jobs"
+      class="job"
+      v-bind:key="job"
+    >
+    <a v-bind:href="job.url" v-bind:key="job.url">{{ job.position }}</a>
+
+    </div>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import axios from "axios";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: 'app',
+  data () {
+    return {
+      jobs: null
+    }
+  },
+  mounted() {
+    axios
+      .get('https://remoteok.io/api')
+      .then(response => {
+        response.data.shift()
+        this.jobs = response.data
+        return this.jobs
+      }
+  )
+}}
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+</script>
