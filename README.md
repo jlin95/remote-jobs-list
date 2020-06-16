@@ -6,7 +6,7 @@ Built using Vue CLI. Data retrieved from [Remote OK API](https://remoteok.io/api
 ### Dev Tasks to Complete
 - [x] Linting
 - [ ] Testing 
-- [ ]Deployment
+- [ ] Deployment
 
 ## Project setup
 ```
