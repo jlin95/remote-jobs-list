@@ -18,6 +18,12 @@ npm install
 npm run serve
 ```
 
+or 
+
+``` 
+yarn serve
+```
+
 ### Compiles and minifies for production
 ```
 npm run build
